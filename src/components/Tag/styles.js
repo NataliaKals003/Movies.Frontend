@@ -10,5 +10,6 @@ export const Container = styled.button`
     border: none;
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+
 `;
 

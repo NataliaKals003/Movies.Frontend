@@ -13,7 +13,6 @@ export const Container = styled.div`
     > main {
         grid-area: content;
     width: calc(100% - 100px); 
-    /* height: 100%; */
     padding: 0 123px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -62,6 +61,11 @@ export const Content = styled.div`
         margin-top: 40px;
         text-align: justify;
     }
+
+    .deleteButton{
+        margin-top: 30px;
+        width: 20%;
+    }
 `;
 
 
@@ -91,3 +95,4 @@ export const Profile = styled.div`
         color: ${({ theme }) => theme.COLORS.PINK};
     }
 `;
+

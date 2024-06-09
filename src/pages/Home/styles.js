@@ -8,35 +8,45 @@ export const Container = styled.div`
     grid-template-areas:
         "header"
         "moviesHeader"
+        "search"
         "content";
         overflow-y: hidden;
-    position: relative;
+   
 `;
 
 export const MoviesHeader = styled.div`
-    grid-area: moviesHeader;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
     padding: 0 123px;
-    margin-top: 50px;
-    position: fixed;
-    width: 100%;
-    top: 105px; 
-    z-index: 10; 
+    margin-bottom: 40px; 
+    grid-area: moviesHeader;
+    
+    .wrap-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 20PX;
+        width: 100%;
+        top: 105px; 
+        z-index: 10; 
 
-    > h1 {
-        font-size: 32px;
-        font-weight: 400;
+        > h1 {
+            font-size: 32px;
+            font-weight: 400;
+        }
     }
 `;
 
+export const Search = styled.div`
+    grid-area: serach;
+    width: 30%;
+`;
+
 export const Content = styled.div`
-    grid-area: content;
-    width: calc(100% - 100px); 
     height: 100%;
+    width: calc(100% - 100px); 
     padding: 0 123px;
-    margin-top: 40px;
+    margin-top: 100px;
     padding-bottom: 90px;
     overflow-y: scroll;
     overflow-x: hidden;  

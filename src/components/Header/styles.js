@@ -23,14 +23,6 @@ export const Brand = styled.div`
     }
 `;
 
-export const Search = styled.div`
-    display: flex;
-    align-items: center;
-    width: inherit;
-    margin-right: 64px;
-    margin-left: 64px;
-`;
-
 export const Profile = styled.div`
     display: flex;
     align-items: center;

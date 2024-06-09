@@ -2,8 +2,20 @@ import { Container, Form, Background } from './styles';
 import { Input } from '../../components/Input';
 import { FiMail, FiLock } from 'react-icons/fi';
 import { Button } from '../../components/Button';
+import { useAuth } from '../../hooks/auth';
+import { useState } from 'react';
 
 export function SignIn() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const { signIn } = useAuth();
+
+    function handleSignIn() {
+        signIn({ email, password });
+    }
+
     return (
         <Container>
             <Form>
@@ -14,14 +26,18 @@ export function SignIn() {
                     placeholder="Email"
                     type="text"
                     icon={FiMail}
+                    onChange={e => setEmail(e.target.value)}
                 />
                 <Input
                     placeholder="Password"
-                    type="text"
+                    type="password"
                     icon={FiLock}
+                    onChange={e => setPassword(e.target.value)}
                 />
 
-                <Button title=" Sign in" />
+                <Button
+                    title="Sign in"
+                    onClick={handleSignIn} />
 
                 <a href="/register">
                     Create acount

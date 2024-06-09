@@ -38,6 +38,7 @@ export const Container = styled.div`
         padding: 16px;
         display: flex;
         gap: 24px;
+        flex-wrap: wrap;
     }
 `;
 

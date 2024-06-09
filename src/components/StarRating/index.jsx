@@ -1,7 +1,10 @@
 import { StarsContainer, StyledStar, EmptyStar } from './styles';
 
 export const StarRating = ({ rating, size }) => {
-    const clampedRating = Math.max(0, Math.min(Math.round(rating), 5));
+
+    const numberRating = Number(rating);
+
+    const clampedRating = isNaN(numberRating) ? 0 : Math.max(0, Math.min(Math.round(numberRating), 5));
 
     return (
         <StarsContainer>

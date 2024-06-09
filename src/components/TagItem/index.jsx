@@ -1,7 +1,7 @@
 import { FiPlus, FiX } from 'react-icons/fi';
 import { Container } from './styles';
 
-export function TagItem({ isNew, value, onClick, ...rest }) {
+export function TagItem({ isNew = false, value, onClick, ...rest }) {
     return (
         <Container $isnew={isNew}>
             <input
